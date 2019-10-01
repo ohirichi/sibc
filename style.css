@@ -5,15 +5,21 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth; /*currently only Firefox and Chrome */
+}
 
 /* Header Styles */
 header{
     display: flex;
-    background-color: black;
+    background-color: rgba(0,0,0,.7);
     color: white;
     justify-content: center;
     align-items: baseline;
     flex-wrap: wrap;
+    position:fixed;
+    width: 100vw;
+    z-index: 100;
 }
 
 .brand-wrapper{
@@ -42,7 +48,10 @@ nav a:any-link {
     color: white;
     text-decoration: none;
 }
-
+nav a:hover{
+    font-weight: bolder;
+    
+}
 .book-icon{
     margin: 10px;
     height: 25px;
@@ -64,10 +73,24 @@ nav a:any-link {
     text-align: center;
 }
 .cta-btn{
+    
     color: white;
     background-color: brown;
     height: 3em;
     font-size: 0.8rem;
+}
+
+.cta-btn:hover{
+    cursor: pointer;
+}
+/*remove blue outline on button focus in chrome */
+.cta-btn:focus{
+    outline: 0;
+}
+
+.cta-btn a:any-link{
+    text-decoration: none;
+    color:white;
 }
 /* Section Styles */
 
@@ -83,8 +106,9 @@ nav a:any-link {
 }
 .about-who{
     color:white;
-    background-color: rgba(123, 11, 11, .79);
+    background-color: rgba(123, 11, 11, 1);
     padding: 1em;
+    opacity: .8;
 }
 .about-what{
     background-color: rgba(225,129,129, 1);
@@ -129,12 +153,16 @@ figcaption{
     position:absolute;
     bottom: 0px;
     padding: 20px 0;
-    display: none;
+    opacity:0;
+    transition-property: opacity;
+    transition-duration: 500ms;
+    transition-timing-function: ease-in;
     
 }
 
 figure:hover figcaption{
-    display: block;
+    opacity: 1;
+    
 }
 
 /* Connect Section Styles */
@@ -168,4 +196,42 @@ footer{
     color:white;
     padding: 2em;
     margin:0;
+}
+
+/* Media Queries for screens larger than 600px */
+@media only screen and (min-width: 600px){
+    header{
+        justify-content: space-between;
+        
+    }
+
+    nav{
+        padding: 1em;
+    }
+    .hero{
+        height: 50vmin;
+    }
+    .about{
+        flex-wrap: nowrap;
+        min-height: 45vh;
+    }
+    .connect{
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        max-height: 50vmax;
+    }
+    .pitch{
+        max-width: 70vw;
+    }
+    .map{
+        text-align: center;
+        display: flex;
+        align-items: center;
+        background-color: rgba(225,129,129, 1);
+    }
+    .map img{
+        width:50vw;
+        min-width: 300px;
+        padding: 1em;
+    }
 }
