@@ -12,7 +12,7 @@ header{
     background-color: black;
     color: white;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     flex-wrap: wrap;
 }
 
@@ -22,6 +22,8 @@ header{
     align-items: center;
     flex-direction: row;
     justify-content: center;
+    font-weight: bold;
+
     
 }
 nav ul {
@@ -36,6 +38,11 @@ nav li {
     margin: 5px;
 }
 
+nav a:any-link {
+    color: white;
+    text-decoration: none;
+}
+
 .book-icon{
     margin: 10px;
     height: 25px;
@@ -43,6 +50,7 @@ nav li {
 }
 /* Hero and CTA Styles */
 .hero{
+    /* white gradient over hero image to help cta stand out more */
     background:linear-gradient(to bottom, rgba(255, 255, 255, .5), rgba(255,255,255, .5)), url(assets/cover.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -60,4 +68,104 @@ nav li {
     background-color: brown;
     height: 3em;
     font-size: 0.8rem;
+}
+/* Section Styles */
+
+/* About Section Styles */
+.about{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.about h3{
+    text-align: center;
+}
+.about-who{
+    color:white;
+    background-color: rgba(123, 11, 11, .79);
+    padding: 1em;
+}
+.about-what{
+    background-color: rgba(225,129,129, 1);
+    padding: 1em;
+}
+
+/* Bookshelf section Styles */
+.book-shelf h3{
+    text-align: center;
+}
+
+.book-shelf img {
+    height: 400px;
+    width: 300px;
+}
+.books{
+    -ms-overflow-style: none;  /* Hide scrollbar on IE 10+ */
+    scrollbar-width: none;  /* Hide scrollbar on Firefox */
+    display:flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    
+}
+
+/* Hide scrollbar on Safari and Chrome */
+.books::-webkit-scrollbar { 
+    display: touch;  
+}
+
+figure{
+    text-align: center;
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+figcaption{
+    color: white;
+    width: 300px;
+    background-color: rgba(0,0,0, .9);
+    position:absolute;
+    bottom: 0px;
+    padding: 20px 0;
+    display: none;
+    
+}
+
+figure:hover figcaption{
+    display: block;
+}
+
+/* Connect Section Styles */
+.connect{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+
+.pitch{
+    background-color: rgba(225,129,129, 1);
+    padding: 2em 1em 3em 1em; 
+}
+
+
+.map img {
+    width: 100vw;
+    /* to prevent overflow set max width as well */
+    max-width: 100%;
+    /* to get rid of the space for descenders 
+    in inline elements as img tag is an inline element */
+    display:block; 
+    
+    
+}
+
+/* Footer Styles */
+footer{
+    background-color:black;
+    color:white;
+    padding: 2em;
+    margin:0;
 }
