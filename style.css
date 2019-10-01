@@ -32,6 +32,12 @@ header{
 
     
 }
+
+.brand a:any-link{
+    text-decoration: none;
+    color: white;
+}
+
 nav ul {
     list-style: none;
     margin: 0em 1em;
@@ -214,6 +220,12 @@ footer{
     .about{
         flex-wrap: nowrap;
         min-height: 45vh;
+    }
+
+    .about-what{
+        color:white;
+        background-color: rgba(123, 11, 11, 1);     
+        opacity: .8;
     }
     .connect{
         flex-wrap: nowrap;
