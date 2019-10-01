@@ -82,8 +82,11 @@ nav a:hover{
     
     color: white;
     background-color: brown;
+    border:none;
+    border-radius: 5%;
     height: 3em;
-    font-size: 0.8rem;
+    padding: .5em;
+    font-size: 1rem;
 }
 
 .cta-btn:hover{
