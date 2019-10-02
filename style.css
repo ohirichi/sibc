@@ -38,10 +38,6 @@ header{
     
 }
 
-.brand a:any-link{
-    text-decoration: none;
-    color: white;
-}
 
 nav ul {
     list-style: none;
@@ -55,10 +51,6 @@ nav li {
     margin: 5px;
 }
 
-nav a:any-link {
-    color: white;
-    text-decoration: none;
-}
 nav a:hover{
     font-weight: bolder;
     
@@ -102,11 +94,6 @@ nav a:hover{
     outline: 0;
 }
 
-.cta-btn a:any-link{
-    text-decoration: none;
-    color:white;
-    
-}
 /* Section Styles */
 
 /* About Section Styles */
