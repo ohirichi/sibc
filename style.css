@@ -81,7 +81,7 @@ nav a:hover{
 .cta-btn{
     
     color: white;
-    background-color: brown;
+    background-color:  rgba(123, 11, 11, .8);
     border:none;
     border-radius: 5%;
     height: 3em;
@@ -109,21 +109,34 @@ nav a:hover{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    line-height: 2;
+    
 
 }
 .about h3{
     text-align: center;
 }
-.about-who{
+.about-who, .about-what{
     color:white;
     background-color: rgba(123, 11, 11, 1);
-    padding: 1em;
-    opacity: .8;
+    padding: 15%;
+    padding-top: 5%;
+    background-image: url(assets/dark-leather.png);
+    text-align:center; 
+    /* opacity: .8; */
 }
-.about-what{
-    background-color: rgba(225,129,129, 1);
-    padding: 1em;
+.about-who{
+    padding-bottom: 5%;
 }
+
+/* .about-who::after{
+    content: url(assets/book.svg);
+    display: inline-block;
+    padding-top: 10%;
+    margin:0;
+    opacity: .70;
+    
+} */
 
 /* Bookshelf section Styles */
 .book-shelf h3{
@@ -184,7 +197,9 @@ figure:hover figcaption{
 }
 
 .pitch{
-    background-color: rgba(225,129,129, 1);
+    background-color: rgba(123, 11, 11, 1);
+    background-image: url(assets/dark-leather.png); 
+    color:white;
     padding: 2em 1em 3em 1em; 
 }
 
@@ -210,40 +225,44 @@ footer{
 
 /* Media Queries for screens larger than 600px */
 @media only screen and (min-width: 600px){
+    body{
+        font-size: 1.15rem;
+    }
     header{
+        flex-wrap:nowrap;
         justify-content: space-between;
         
     }
 
     nav{
-        padding: 1em;
+        padding: .75em;
     }
     .hero{
-        height: 50vmin;
+        height: 75vh;
+        background-attachment: fixed;
     }
     .about{
-        flex-wrap: nowrap;
+        /* flex-wrap: nowrap; */
         min-height: 45vh;
+        
+        
     }
-
-    .about-what{
-        color:white;
-        background-color: rgba(123, 11, 11, 1);     
-        opacity: .8;
-    }
+  
     .connect{
         flex-wrap: nowrap;
         justify-content: space-between;
-        max-height: 50vmax;
+        max-height: 70vmax;
     }
     .pitch{
         max-width: 70vw;
+        padding-top: 5%;
     }
     .map{
         text-align: center;
         display: flex;
         align-items: center;
-        background-color: rgba(225,129,129, 1);
+        background-color: rgba(123, 11, 11, 1);
+        background-image: url(assets/dark-leather.png); 
     }
     .map img{
         width:50vw;
