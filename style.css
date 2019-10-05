@@ -90,7 +90,7 @@ nav a:hover{
     cursor: pointer;
 }
 /*remove blue outline on button focus in chrome */
-.cta-btn:focus{
+button:focus{
     outline: 0;
 }
 
@@ -145,12 +145,52 @@ nav a:hover{
     display:flex;
     flex-wrap: nowrap;
     overflow-x: auto;
+    scroll-behavior: smooth;
     
 }
 
 /* Hide scrollbar on Safari and Chrome */
 .books::-webkit-scrollbar { 
     display: touch;  
+}
+
+.scroll-left, .scroll-right {
+    appearance: none;
+    padding: 0;
+    border: 0;
+    position: sticky;
+    height: 85px;
+    background: rgba(0,0,0, .4);
+    /* background-color: rgba(123, 11, 11, 1); */
+    border-radius: 50%; 
+    padding: 20px;
+    z-index:10;
+    display: flex;
+    align-items: center;
+    top: 35%;
+}
+
+.scroll-left{
+    left:5px;
+    
+
+}
+
+.scroll-right{
+    right: 5px;
+}
+
+.scroll-left:hover, .scroll-right:hover{
+    background: rgba(0,0,0, .8);
+}
+.scroll-icon{    
+        width: 20px;
+        height: 44px;
+        fill: #fff;
+}
+
+.hidden{
+    visibility: hidden;
 }
 
 figure{
